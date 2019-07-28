@@ -28,23 +28,36 @@ import {
   LineSeries,
   RadialChart
 } from "react-vis";
+
 import { Typography } from "@material-ui/core";
+
+import MobileStepper from "@material-ui/core/MobileStepper";
+import Button from "@material-ui/core/Button";
+
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      value: 0
+      value: 0,
+      activePage: 0
     };
   }
 
   nextPage = reset => {
     reset();
     this.flipPage.gotoNextPage();
+    this.setState({
+      activePage: this.state.activePage + 1
+    });
   };
+
   prevPage = reset => {
     reset();
     this.flipPage.gotoPreviousPage();
+    this.setState({
+      activePage: this.state.activePage - 1
+    });
   };
   tabChange = (event, value) => {
     this.setState({ value });
@@ -101,7 +114,7 @@ class App extends Component {
               height={winH}
               width={winW}
               pageBackground="#009968"
-              onPageChange={() => this.nextPage(resetTranscript)}
+              onPageChange={() => resetTranscript()}
             >
               <article style={styles.app.articles}>
                 <h1>Page 1</h1>
@@ -146,18 +159,30 @@ class App extends Component {
                 justifyContent: "center"
               }}
             >
-              <button
-                style={styles.app.pageBtns}
-                onClick={() => this.prevPage(resetTranscript)}
-              >
-                <Icon>arrow_back</Icon>
-              </button>
-              <button
-                style={styles.app.pageBtns}
-                onClick={() => this.nextPage(resetTranscript)}
-              >
-                <Icon>arrow_forward</Icon>
-              </button>
+              <MobileStepper
+                variant="dots"
+                steps={3}
+                position="static"
+                activeStep={this.state.activePage}
+                backButton={
+                  <Button
+                    size="small"
+                    onClick={() => this.prevPage(resetTranscript)}
+                    disabled={this.state.activePage === 0}
+                  >
+                    Back
+                  </Button>
+                }
+                nextButton={
+                  <Button
+                    size="small"
+                    onClick={() => this.nextPage(resetTranscript)}
+                    disabled={this.state.activePage === 2}
+                  >
+                    Next
+                  </Button>
+                }
+              />
             </div>
           </div>
         )}
