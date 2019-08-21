@@ -9,25 +9,16 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 
 import Text from "./Components/Text";
 import { styles } from "./styles";
 
-import book from "./assets/book.png";
+import logo from "./assets/logo2.png";
 import page1 from "./assets/page1.png";
 import page2 from "./assets/page2.png";
 import page3 from "./assets/page3.png";
 
-import {
-  XYPlot,
-  XAxis,
-  YAxis,
-  HorizontalGridLines,
-  LineSeries,
-  RadialChart
-} from "react-vis";
+import { XYPlot, XAxis, YAxis, LineSeries, RadialChart } from "react-vis";
 
 import { Typography } from "@material-ui/core";
 
@@ -78,26 +69,69 @@ class App extends Component {
 
     return (
       <div style={styles.app.container}>
-        <Typography
+        <AppBar
+          position="static"
           style={{
-            fontFamily: "ZCOOL XiaoWei, serif",
-            textAlign: "center",
-            color: "#003D9A",
-            fontWeight: "700",
-            margin: 2
+            backgroundColor: "#F4F4F4"
           }}
-          component="h3"
-          variant="h2"
-          gutterBottom
         >
-          SPEAK
-          <img src={book} alt="" width="55px" />
-          READ
-        </Typography>
-        <AppBar position="static" style={{ backgroundColor: "#009968" }}>
-          <Tabs value={this.state.value} onChange={this.tabChange}>
-            <Tab label="Storybook" />
-            <Tab label="Analytics" />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              padding: 20
+            }}
+          >
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Open Sans Condensed, sans-serif",
+
+                fontSize: 40,
+                textDecoration: "none"
+              }}
+            >
+              R E A D I N G
+            </Typography>
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Open Sans , sans-serif",
+                fontWeight: 700,
+                fontSize: 26,
+                textDecoration: "none",
+                paddingLeft: 10,
+                alignItems: "flex-end",
+                paddingBottom: 5
+              }}
+            >
+              BUDDY
+            </Typography>
+          </div>
+
+          <Tabs
+            value={this.state.value}
+            onChange={this.tabChange}
+            style={{
+              backgroundColor: "#F4F4F4",
+              borderTop: "2px solid #C8C8C6"
+            }}
+            centered
+            textColor="primary"
+          >
+            <Tab
+              label="  Storybook  "
+              style={{
+                fontFamily: "Cantarell, sans-serif",
+                color: "black",
+                padding: 10
+              }}
+            />
+            <Tab
+              label="  Analytics  "
+              style={{ fontFamily: "Cantarell, sans-serif", color: "black" }}
+            />
           </Tabs>
         </AppBar>
 
@@ -110,44 +144,44 @@ class App extends Component {
               }}
               flipOnTouch={true}
               orientation="horizontal"
-              animationDuration={400}
+              animationDuration={1000}
               height={winH}
               width={winW}
-              pageBackground="#009968"
+              pageBackground="#000000"
               onPageChange={() => resetTranscript()}
+              perspective="80em"
+              maskOpacity={0.1}
             >
               <article style={styles.app.articles}>
-                <h1>Page 1</h1>
-                <Paper elevation={3}>
+                <Paper style={{ flexGrow: 1, width: "50%" }}>
                   <Text
                     reset={resetTranscript}
                     transcript={transcript}
                     text="The dog chased the cat around the house."
                   />
                 </Paper>
-                <img src={page1} alt="" />
+                <img src={page1} alt="" style={{ flexGrow: 1, width: "50%" }} />
               </article>
               <article style={styles.app.articles}>
-                <h1>Page 2</h1>
-                <Paper elevation={3}>
+                <Paper style={{ flexGrow: 1, width: "50%" }}>
                   <Text
                     reset={resetTranscript}
                     transcript={transcript}
+                    style={{ alignTe: "center" }}
                     text="The cat ran up the tree to get away from the dog."
                   />
                 </Paper>
-                <img src={page2} alt="" />
+                <img src={page2} alt="" style={{ flexGrow: 1, width: "50%" }} />
               </article>
               <article style={styles.app.articles}>
-                <h1>Page 3</h1>
-                <Paper elevation={3}>
+                <Paper style={{ flexGrow: 1, width: "50%" }}>
                   <Text
                     reset={resetTranscript}
                     transcript={transcript}
                     text="This let the mouse run away."
                   />
                 </Paper>
-                <img src={page3} alt="" />
+                <img src={page3} alt="" style={{ flexGrow: 1, width: "50%" }} />
               </article>
             </FlipPage>
 
@@ -156,7 +190,8 @@ class App extends Component {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "center"
+                justifyContent: "center",
+                margin: 5
               }}
             >
               <MobileStepper
@@ -164,6 +199,7 @@ class App extends Component {
                 steps={3}
                 position="static"
                 activeStep={this.state.activePage}
+                style={styles.app.bookBar}
                 backButton={
                   <Button
                     size="small"

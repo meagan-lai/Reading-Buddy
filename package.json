@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.3.0",
     "define-word": "^1.0.5",
     "elemental": "^0.6.1",
     "gh-pages": "^2.0.1",
