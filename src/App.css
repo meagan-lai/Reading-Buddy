@@ -24,6 +24,10 @@
   color: #61dafb;
 }
 
+.rfp-touchZone:hover {
+  background-color: rgba(95, 95, 95, 0.2);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -24,6 +24,7 @@ import { Typography } from "@material-ui/core";
 
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Button from "@material-ui/core/Button";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -145,12 +146,12 @@ class App extends Component {
               flipOnTouch={true}
               orientation="horizontal"
               animationDuration={1000}
-              height={winH}
-              width={winW}
-              pageBackground="#000000"
               onPageChange={() => resetTranscript()}
               perspective="80em"
               maskOpacity={0.1}
+              width="100%"
+              showHint={true}
+              showTouchHint={true}
             >
               <article style={styles.app.articles}>
                 <Paper style={{ flexGrow: 1, width: "50%" }}>
@@ -191,7 +192,9 @@ class App extends Component {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",
-                margin: 5
+                margin: 5,
+
+                borderTop: "10px solid white"
               }}
             >
               <MobileStepper

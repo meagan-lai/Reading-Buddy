@@ -1,3 +1,4 @@
+import openBook from "./assets/openbook.png";
 export const styles = {
   app: {
     container: {
@@ -8,18 +9,18 @@ export const styles = {
       boxShadow: "0 1px 10px rgba(0,0,0,0.12), 0 1px 20px rgba(0,0,0,0.24)"
     },
     book: {
-      height: "80%",
-      backgroundColor: "#C8C8C6",
-      marginHorizontal: "50",
-      padding: 30,
-      borderBottom: "10px solid white"
+      backgroundColor: "blue",
+      marginLeft: 50,
+      marginRight: 50,
+      marginTop: 30,
+      marginBottom: 30
     },
     articles: {
       display: "flex",
       flexDirection: "row",
       width: "100%",
       height: "100%",
-      backgroundColor: "white",
+      backgroundColor: "transparent",
       paddingLeft: 10
     },
     pageBtns: {
