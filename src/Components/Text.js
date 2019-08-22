@@ -40,7 +40,7 @@ class Text extends Component {
     }
     const { showDialog, showPopup, correctedWord, anchorEl } = this.state;
     return (
-      <div style={{ fontSize: 64, padding: 50 }}>
+      <div style={{ fontSize: 64, padding: "5%", paddingLeft: "30%" }}>
         {transcript.map((word, i) => {
           if (
             text[i] &&

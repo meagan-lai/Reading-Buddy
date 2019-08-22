@@ -73,7 +73,8 @@ class App extends Component {
         <AppBar
           position="static"
           style={{
-            backgroundColor: "#F4F4F4"
+            backgroundColor: "white",
+            borderTop: "30px solid #F06E3A"
           }}
         >
           <div
@@ -81,19 +82,93 @@ class App extends Component {
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              padding: 20
+              paddingTop: 25
             }}
           >
             <Typography
               style={{
                 display: "flex",
-                fontFamily: "Open Sans Condensed, sans-serif",
-
+                fontFamily: "Neucha, cursive",
+                color: "#F06E3A",
                 fontSize: 40,
-                textDecoration: "none"
+                textDecoration: "none",
+                paddingLeft: 5
               }}
             >
-              R E A D I N G
+              R
+            </Typography>
+
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Neucha, cursive",
+                color: "#F3D540",
+                fontSize: 40,
+                textDecoration: "none",
+                paddingLeft: 5
+              }}
+            >
+              E
+            </Typography>
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Neucha, cursive",
+                color: "#547896",
+                fontSize: 40,
+                textDecoration: "none",
+                paddingLeft: 5
+              }}
+            >
+              A
+            </Typography>
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Neucha, cursive",
+                color: "#51ABC6",
+                fontSize: 40,
+                textDecoration: "none",
+                paddingLeft: 5
+              }}
+            >
+              D
+            </Typography>
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Neucha, cursive",
+                color: "#F18B8A",
+                fontSize: 40,
+                textDecoration: "none",
+                paddingLeft: 5
+              }}
+            >
+              I
+            </Typography>
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Neucha, cursive",
+                color: "#F5A570",
+                fontSize: 40,
+                textDecoration: "none",
+                paddingLeft: 5
+              }}
+            >
+              N
+            </Typography>
+            <Typography
+              style={{
+                display: "flex",
+                fontFamily: "Neucha, cursive",
+                color: "#51ABC6",
+                fontSize: 40,
+                textDecoration: "none",
+                paddingLeft: 5
+              }}
+            >
+              G
             </Typography>
             <Typography
               style={{
@@ -101,10 +176,11 @@ class App extends Component {
                 fontFamily: "Open Sans , sans-serif",
                 fontWeight: 700,
                 fontSize: 26,
+                color: "#514d4d",
                 textDecoration: "none",
                 paddingLeft: 10,
                 alignItems: "flex-end",
-                paddingBottom: 5
+                paddingBottom: 10
               }}
             >
               BUDDY
@@ -115,8 +191,7 @@ class App extends Component {
             value={this.state.value}
             onChange={this.tabChange}
             style={{
-              backgroundColor: "#F4F4F4",
-              borderTop: "2px solid #C8C8C6"
+              backgroundColor: "white"
             }}
             centered
             textColor="primary"
@@ -125,13 +200,17 @@ class App extends Component {
               label="  Storybook  "
               style={{
                 fontFamily: "Cantarell, sans-serif",
-                color: "black",
-                padding: 10
+                color: "#514d4d",
+                fontWeight: 700
               }}
             />
             <Tab
               label="  Analytics  "
-              style={{ fontFamily: "Cantarell, sans-serif", color: "black" }}
+              style={{
+                fontFamily: "Cantarell, sans-serif",
+                color: "#514d4d",
+                fontWeight: 700
+              }}
             />
           </Tabs>
         </AppBar>
@@ -154,17 +233,42 @@ class App extends Component {
               showTouchHint={true}
             >
               <article style={styles.app.articles}>
-                <Paper style={{ flexGrow: 1, width: "50%" }}>
+                <Paper
+                  style={{
+                    flexGrow: 1,
+                    width: "50%",
+                    background: "transparent"
+                  }}
+                >
                   <Text
                     reset={resetTranscript}
                     transcript={transcript}
                     text="The dog chased the cat around the house."
                   />
                 </Paper>
-                <img src={page1} alt="" style={{ flexGrow: 1, width: "50%" }} />
+                <div
+                  style={{
+                    width: "50%",
+                    display: "flex",
+                    justifyConent: "flex-start",
+                    alignItems: "center"
+                  }}
+                >
+                  <img
+                    src={page1}
+                    alt=""
+                    style={{ width: "80%", padding: "5%" }}
+                  />
+                </div>
               </article>
               <article style={styles.app.articles}>
-                <Paper style={{ flexGrow: 1, width: "50%" }}>
+                <Paper
+                  style={{
+                    flexGrow: 1,
+                    width: "50%",
+                    background: "transparent"
+                  }}
+                >
                   <Text
                     reset={resetTranscript}
                     transcript={transcript}
@@ -172,22 +276,53 @@ class App extends Component {
                     text="The cat ran up the tree to get away from the dog."
                   />
                 </Paper>
-                <img src={page2} alt="" style={{ flexGrow: 1, width: "50%" }} />
+                <div
+                  style={{
+                    width: "50%",
+                    display: "flex",
+                    justifyConent: "flex-start"
+                  }}
+                >
+                  <img
+                    src={page2}
+                    alt=""
+                    style={{ width: "80%", padding: "5%" }}
+                  />
+                </div>
               </article>
               <article style={styles.app.articles}>
-                <Paper style={{ flexGrow: 1, width: "50%" }}>
+                <Paper
+                  style={{
+                    flexGrow: 1,
+                    width: "50%",
+                    background: "transparent"
+                  }}
+                >
                   <Text
                     reset={resetTranscript}
                     transcript={transcript}
                     text="This let the mouse run away."
                   />
                 </Paper>
-                <img src={page3} alt="" style={{ flexGrow: 1, width: "50%" }} />
+                <div
+                  style={{
+                    width: "50%",
+                    display: "flex",
+                    justifyConent: "flex-start",
+                    alignItems: "center"
+                  }}
+                >
+                  <img
+                    src={page3}
+                    alt=""
+                    style={{ width: "80%", padding: "5%" }}
+                  />
+                </div>
               </article>
             </FlipPage>
 
             {/* <button onClick={resetTranscript}>Try Again</button> */}
-            <div
+            {/*<div
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -222,7 +357,7 @@ class App extends Component {
                   </Button>
                 }
               />
-            </div>
+              </div>*/}
           </div>
         )}
         {this.state.value === 1 && (
