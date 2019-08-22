@@ -216,7 +216,9 @@ class App extends Component {
         </AppBar>
 
         {this.state.value === 0 && (
-          <div>
+          <div
+            style={{ width: "80%", paddingLeft: "10%", paddingRight: "10%" }}
+          >
             <FlipPage
               style={styles.app.book}
               ref={c => {
@@ -234,6 +236,7 @@ class App extends Component {
             >
               <article style={styles.app.articles}>
                 <Paper
+                  elevation={0}
                   style={{
                     flexGrow: 1,
                     width: "50%",
@@ -263,6 +266,7 @@ class App extends Component {
               </article>
               <article style={styles.app.articles}>
                 <Paper
+                  elevation={0}
                   style={{
                     flexGrow: 1,
                     width: "50%",
@@ -292,6 +296,7 @@ class App extends Component {
               </article>
               <article style={styles.app.articles}>
                 <Paper
+                  elevation={0}
                   style={{
                     flexGrow: 1,
                     width: "50%",
@@ -360,6 +365,108 @@ class App extends Component {
               </div>*/}
           </div>
         )}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            paddingTop: 10,
+            backgroundColor: "white"
+          }}
+        >
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#F06E3A",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            W
+          </Typography>
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#F3D540",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            E
+          </Typography>
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#547896",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            L
+          </Typography>
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#51ABC6",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            C
+          </Typography>
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#F5A570",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            O
+          </Typography>
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#F18B8A",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            M
+          </Typography>
+          <Typography
+            style={{
+              display: "flex",
+              fontFamily: "Open Sans, sans-serif",
+              color: "#547896",
+              fontSize: 40,
+              textDecoration: "none",
+              fontWeight: 700,
+              paddingLeft: 5
+            }}
+          >
+            E
+          </Typography>
+        </div>
+
         {this.state.value === 1 && (
           <div
             style={{

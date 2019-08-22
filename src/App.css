@@ -30,8 +30,20 @@
   color: #61dafb;
 }
 
-.rfp-touchZone:hover {
+.rfp-touchZone-next:hover {
   background-color: rgba(95, 95, 95, 0.2);
+  background-image: url("./assets/right.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+.rfp-touchZone-previous:hover {
+  background-color: rgba(95, 95, 95, 0.2);
+  background-image: url("./assets/left.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
 }
 
 @keyframes App-logo-spin {
