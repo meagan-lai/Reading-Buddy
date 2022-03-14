@@ -204,14 +204,6 @@ class App extends Component {
                 fontWeight: 700
               }}
             />
-            <Tab
-              label="  Analytics  "
-              style={{
-                fontFamily: "Cantarell, sans-serif",
-                color: "#514d4d",
-                fontWeight: 700
-              }}
-            />
           </Tabs>
         </AppBar>
 
