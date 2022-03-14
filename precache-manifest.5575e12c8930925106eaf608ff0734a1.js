@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "./static/media/logo2.a8bc9824.png"
   },
   {
-    "revision": "9ff83b3f5a570bf09fc385c7943e0fe1",
-    "url": "./static/media/left.9ff83b3f.svg"
-  },
-  {
     "revision": "61b310be31fd364cee64eb34e64339a1",
     "url": "./static/media/right.61b310be.svg"
+  },
+  {
+    "revision": "9ff83b3f5a570bf09fc385c7943e0fe1",
+    "url": "./static/media/left.9ff83b3f.svg"
   },
   {
     "revision": "bff66f05b649a562d6aa27d2a6d9a65f",
